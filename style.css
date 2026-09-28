@@ -1,94 +1,89 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-nav {
-  background-color: #00264d;
-  padding: 15px 20px;
-  position: fixed;
-}
-
-nav a {
-  color: #ecf0f1;
-  text-decoration: none;
-  margin-right: 20px;
-  font-size: 16px;
-  transition: transform 0.2s ease;
-  left: 0px;
-}
-
-nav a:hover {
-  color: #3498db;
+  margin: 0;
+  font-family: sans-serif;
 }
 
 header {
-  background-color: blue;
+  background-color: #333;
   color: white;
-  padding: 60px 20px;
+  padding: 16px;
   text-align: center;
-  border: 5px solid burlywood;
 }
 
-section {
-  padding: 40px 20px;
+nav {
+  background-color: #222;
+  /* TODO: ustaw position dla nav (sticky, top: 0, z-index: 10) */
 }
 
-.light {
-  background-color: #ecf0f1;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  gap: 16px;
 }
 
-.dark {
-  background-color: #003457;
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+    color: blue;
+    background-color: darkred;
+    border-radius: 8px;
+}
+
+.gallery {
+  padding: 16px;
+  /* TODO: dodaj clearfix dla .gallery (::after z clear: both) */
+}
+
+.photo-item {
+  /* TODO: dodaj float: left, width: 30%, margin: 1.5%, position: relative */
+  width: 30%;
+  float: left;
+  margin: 1.5%;
+  border-radius: 8px;
+}
+
+.photo-item img {
+  /* TODO: nadaj obrazkom w .photo-item szerokość 100% i display: block */
+  width: 100%;
+}
+
+.photo-caption {
+  /* TODO: dodaj style dla nakładki (position: absolute, bottom: 0, margin: 0, tło półprzezroczyste) */
 }
 
 footer {
-  background-color: #0080ff;
-  color: #ecf0f1;
-  padding: 20px;
+  background-color: #333;
+  color: white;
   text-align: center;
+  padding: 12px;
+  clear: both;
 }
 
-.card-section:hover {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 10px rgba(0, 123, 255 0.3);
+/* TODO: dodaj regułę @media dla ekranów do 768px (.photo-item width: 46%) */
+
+/* TODO: dodaj regułę @media dla ekranów do 480px (.photo-item width: 96%, float: none) */
+
+.textus {
+    background-color: darkblue;
+    border: 0.7% solid aquamarine;
+    border-style: double;
+    border-radius: 8px;
 }
 
-.nav a:hover {
-  transform: scale(1.01);
-  transition: transform 0.2s ease;
+@media (max-width: 760px) {
+    .photo-item {
+    width: 46%;
+    }
 }
 
-samting {
-  background-color: #003457;
-  border: 2px solid blueviolet;
-  -webkit-text-fill-color: aquamarine;
-}
-
-nav b {
-  color: #ecf0f1;
-  text-decoration: none;
-  margin-right: 20px;
-  font-size: 16px;
-  transition: transform 0.2s ease;
-  right: 0px;
-}
-
-nav b:hover {
-  color: #418c00;
-}
-
-.boink {
-  background-color: #418c00;
-  border: 4px solid rgba(0, 255, 200);
+@media (max-width: 615px) {
+    .photo-item {
+    width: 96%;
+    float: none;
+    }
 }
